@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <body>
+    <div id = "root"></div>
+    </body>
+        <span> Total Clicks :0</span>
+        <button id ="btn"> Click me</button>
+    </body>
+    <script>
+        import ReactDOM from "react-dom/client";
+
+
+        const root = document.getElementById("root");
+        let counter = 0;
+        const Container =() => (
+            <div>
+                <h3>Total clicks: 0</h3>
+                <button>Click me</button>
+            </div>
+        );
+            ReactDOM.render(<Container/>, root);
+    </script>
+</html>
