@@ -13,12 +13,25 @@
 
         const root = document.getElementById("root");
         let counter = 0;
-        const Container =() => (
-            <div>
-                <h3>Total clicks: 0</h3>
-                <button>Click me</button>
-            </div>
-        );
+        function countUp(){
+            counter = counter +1;
+            render();
+        }
+        function render(){
+            ReactDOM.render(<App/>, root);
+        }
+        function App() {
+            /*Reactjs 가 리렌더링을 도와주는 것을 알아보는 코드 state 에 대해서 알아보기 */
+            const [counter, modifier] = React.useState(0);/*초긱값을 설정하는 것을 도와줄수있음 배열의 첫번째값은 초기값이고 두번째 배열은 함수값*/
+            console.log(data);
+            return (
+                <div>
+                    <h3>Total clicks: 0</h3>
+                    <button >Click me</button>
+                </div>
+            );
+        }
+        render();
             ReactDOM.render(<Container/>, root);
     </script>
 </html>
